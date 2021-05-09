@@ -6,15 +6,16 @@ const IconText = ({
   icon,
   size = 1,
   color = '#000',
-  className = '',
+  className = '', 
   TextClassName = '',
   children,
+  onClick
 }) => (
-  <Row className={className}>
+  <Row className={`d-flex align-items-center ${className}`} onClick={onClick}>
     <Col xs={size} className='d-flex justify-content-center'>
       <FontAwesomeIcon icon={icon} size={`${size}x`} color={color} />
     </Col>
-    <Col xs={12 - size} className={TextClassName}>
+    <Col xs={11 - size} className={TextClassName}>
       {children}
     </Col>
   </Row>
