@@ -6,16 +6,16 @@ import './Hero.scss';
 
 const Hero = () => (
   <Jumbotron className='text-center text-light hero'>
-      <Row className='m-lg-5'>
-        <Col lg className="text-lg-right m-lg-5 ">
-          <Image className='d-lg-none' src={logo} />
-          <Image className='d-none d-lg-inline-block' src={logoDesktop} />
-        </Col>
-        <Col className="text-lg-left m-lg-5">
-          <p>Pague suas contas pelo nosso APP</p>
-          <Button variant="outline-light">Abra sua Conta </Button>
-          </Col>
-      </Row>
+    <Row className='my-lg-5'>
+      <Col lg className='text-lg-right my-lg-5'>
+        <Image className='d-lg-none' src={logo} />
+        <Image className='d-none d-lg-inline-block' src={logoDesktop} />
+      </Col>
+      <Col lg className='text-lg-left my-lg-5'>
+        <p>Pague suas contas pelo nosso APP</p>
+        <Button variant='outline-light'>Abra sua conta</Button>
+      </Col>
+    </Row>
   </Jumbotron>
 );
 

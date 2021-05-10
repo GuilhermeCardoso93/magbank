@@ -58,7 +58,7 @@ const CreditCard = () => (
         </Row>
       </Col>
       <Col xs={12} lg={5}>
-        <Image src={creditCard} alt='MAgbank' fuild/>
+        <Image src={creditCard} alt='Magbank Credit Card Example' fluid />
       </Col>
     </Row>
   </Container>
