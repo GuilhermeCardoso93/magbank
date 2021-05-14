@@ -1,5 +1,12 @@
 @import "../variables";
+
+
 .dashboard {
+
+  @media screen and (min-width: 992px) {
+    min-height: cal(100vh -16.25rem);
+  }
+
   &_user-avatar {
     position: relative;
   }
@@ -22,4 +29,13 @@
       text-decoration: none;
     }
   }
+
+ 
+    a.nav-item.nav-link {
+      color: $color-primary;
+  }
+
+  a.nav-item.nav-link.active {
+    color: $color-muted;
+}
 }
