@@ -1,41 +1,61 @@
-@import "../variables";
-
+@import '../variables';
 
 .dashboard {
-
   @media screen and (min-width: 992px) {
-    min-height: cal(100vh -16.25rem);
+    min-height: calc(100vh - 12.25rem);
   }
 
-  &_user-avatar {
+  &__user-avatar {
     position: relative;
   }
 
-  &_user-icon {
+  &__user-icon {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -100%);
   }
 
   &_button {
     color: $color-primary;
     text-decoration: none;
+    margin-bottom: 0.5rem;
 
     &:hover,
-    &--active {
-      background-color: $color-primary;
-      color: #fff;
+    &:focus,
+    &--active,
+    &--active:hover {
       text-decoration: none;
+    }
+
+    &:hover,
+    &--active,
+    &--active:hover {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $color-muted;
+    }
+
+    &--active,
+    &--active:hover {
+      background-color: $color-primary;
     }
   }
 
- 
-    a.nav-item.nav-link {
-      color: $color-primary;
+  a.nav-item.nav-link {
+    color: $color-primary;
   }
 
   a.nav-item.nav-link.active {
     color: $color-muted;
+  }
 }
+
+a.dashboard__link,
+a.dashboard__link:active,
+a.dashboard__link:focus,
+a.dashboard__link:hover {
+  text-decoration: none;
 }
