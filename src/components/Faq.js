@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Accordion, Card } from "react-bootstrap";
-import IconText from "./IconText";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
+import IconText from './IconText';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCreditCard,
   faWallet,
   faShieldAlt,
   faUserTie,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import "./Faq.scss";
+import './Faq.scss';
 
 const Faq = () => {
   const options = [
-    { icon: faCreditCard, text: "Cartão de crédito" },
-    { icon: faWallet, text: "Conta e abertura" },
-    { icon: faShieldAlt, text: "Token digital" },
-    { icon: faUserTie, text: "Produtos e Serviços" },
+    { icon: faCreditCard, text: 'Cartão de crédito' },
+    { icon: faWallet, text: 'Conta e abertura' },
+    { icon: faShieldAlt, text: 'Token digital' },
+    { icon: faUserTie, text: 'Produtos e Serviços' },
   ];
 
   const [index, setIndex] = useState(0);
@@ -26,38 +26,38 @@ const Faq = () => {
   };
 
   return (
-    <section className="faq text-light">
-      <Container className="py-5">
-        <Row className="justify-content-center">
-          <h2 className="faq-title my-5">Dúvidas frequentes</h2>
+    <section className='faq text-light'>
+      <Container className='py-5'>
+        <Row className='justify-content-center'>
+          <h2 className='faq-title my-5'>Dúvidas frequentes</h2>
         </Row>
-        <Row className="d-flex align-items-center justify-items-center">
-          <Col className="d-lg-none mb-5" xs={12}>
+        <Row className='d-flex align-items-center justify-items-center'>
+          <Col className='d-lg-none mb-5' xs={12}>
             <Row>
               {options.map(({ icon }, key) => (
-                <Col className="d-flex justify-content-center" key={key}>
+                <Col className='d-flex justify-content-center' key={key}>
                   <FontAwesomeIcon
                     icon={icon}
-                    size="2x"
-                    color={key === index ? "#FFF" : "#BBB"}
+                    size='2x'
+                    color={key === index ? '#FFF' : '#BBB'}
                     onClick={() => handleClick(key)}
                   />
                 </Col>
               ))}
             </Row>
-            <Row className="justify-content-center mt-5">
-              <p className="lead">{options[index].text}</p>
+            <Row className='justify-content-center mt-5'>
+              <p className='lead'>{options[index].text}</p>
             </Row>
           </Col>
 
-          <Col className="d-none d-lg-block">
+          <Col className='d-none d-lg-block'>
             {options.map(({ icon, text }, key) => (
               <IconText
                 icon={icon}
                 size={3}
-                className="faq-clickable mb-3"
-                textClassName="lead"
-                color={key === index ? "#FFF" : "#BBB"}
+                className='faq-clickable mb-3'
+                textClassName='lead'
+                color={key === index ? '#FFF' : '#BBB'}
                 onClick={() => handleClick(key)}
                 key={key}
               >
@@ -67,12 +67,12 @@ const Faq = () => {
           </Col>
 
           <Col>
-            <Accordion defaultActiveKey="0" activeKey={`${index}`}>
+            <Accordion defaultActiveKey='0' activeKey={`${index}`}>
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="0">
+                <Accordion.Toggle as={Card.Header} eventKey='0'>
                   Lorem ipsum dolor sit amet
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="0">
+                <Accordion.Collapse eventKey='0'>
                   <Card.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam tincidunt arcu vel arcu fermentum, eget accumsan
@@ -87,10 +87,10 @@ const Faq = () => {
                 </Accordion.Collapse>
               </Card>
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1">
+                <Accordion.Toggle as={Card.Header} eventKey='1'>
                   Nulla porttitor eros ac ex tristique posuere
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="1">
+                <Accordion.Collapse eventKey='1'>
                   <Card.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam tincidunt arcu vel arcu fermentum, eget accumsan
@@ -105,10 +105,10 @@ const Faq = () => {
                 </Accordion.Collapse>
               </Card>
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="2">
+                <Accordion.Toggle as={Card.Header} eventKey='2'>
                   Quisque fringilla tincidunt arcu
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="2">
+                <Accordion.Collapse eventKey='2'>
                   <Card.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam tincidunt arcu vel arcu fermentum, eget accumsan
@@ -123,10 +123,10 @@ const Faq = () => {
                 </Accordion.Collapse>
               </Card>
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="3">
-                  Nam elementum lobortis purus a maximus tortor
+                <Accordion.Toggle as={Card.Header} eventKey='3'>
+                  Nam elementum lobortis 
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="3">
+                <Accordion.Collapse eventKey='3'>
                   <Card.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam tincidunt arcu vel arcu fermentum, eget accumsan
