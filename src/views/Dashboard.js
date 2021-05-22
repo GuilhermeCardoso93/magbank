@@ -6,6 +6,7 @@ import { faUser, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
 import AccountPayments from "../components/AccountPayments";
+import AccountHistory from "../components/AccountHistory";
 
 import "./Dashboard.scss";
 
@@ -54,6 +55,81 @@ const Dashboard = () => {
       },
       { date: "18/08", description: "NETFLIX  21212", value: "21,00" },
     ],
+
+    history: [
+      {
+        date: "17/07",
+        description: "SAQUE 24 HORAS",
+        value: "200,00-",
+        saldo:""
+      },
+      {
+        date: "17/07",
+        description: "SALDO DO DIA",
+        value: "",
+        saldo:"2.780,00"
+      },
+      {
+        date: "19/07",
+        description: "ESTACIONAMENTO",
+        value: "12,00-",
+        saldo:""
+      },
+      {
+        date: "19/07",
+        description: "COMPRA NA INTERNET",
+        value: "450,00-",
+        saldo:""
+      },
+      {
+        date: "19/07",
+        description: "SALDO DO DIA",
+        value: "",
+        saldo:"2.318,00"
+      },
+      {
+        date: "20/07",
+        description: "SUPERMERCADO",
+        value: "275,90-",
+        saldo:""
+      },
+      {
+        date: "20/07",
+        description: "ESTACIONAMENTO",
+        value: "12,00-",
+        saldo:""
+      },
+      {
+        date: "20/07",
+        description: "SHOPPING",
+        value: "180,00-",
+        saldo:""
+      },
+      {
+        date: "20/07",
+        description: "SALDO DO DIA",
+        value: "",
+        saldo:"1.851,00"
+      },
+      {
+        date: "21/07",
+        description: "SUPERMERCADO",
+        value: "275,90-",
+        saldo:""
+      },
+      {
+        date: "21/07",
+        description: "DEPOSITO",
+        value:  "1.000,00",
+        saldo:""
+      },
+      {
+        date: "20/07",
+        description: "SALDO DO DIA",
+        value: "",
+        saldo:"2.576,00"
+      },
+    ],
   };
 
   return (
@@ -93,7 +169,7 @@ const Dashboard = () => {
         </Col>
         <Switch>
           <Route path="/dashboard/history">
-            <h2>Extratos</h2>
+            <AccountHistory data={data}/>
           </Route>
           <Route path="/dashboard/payments">
             <AccountPayments/>
